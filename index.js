@@ -1,14 +1,28 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
+function hasTargetSum (array, target) {
+  for (let i = 0; i < array.length-1; i++){
+      for (let j = i + 1; j < array.length; j++){
+          if (array[i] + array[j] === target) {
+              return true;
+          } else if (array[i] + array[j] !== target) {
+            return false;
+          }
+      } 
+  }
 }
+
 
 /* 
   Write the Big O time complexity of your function here
 */
 
 /* 
-  Add your pseudocode here
-*/
+ return true if any pair of numbers in the array adds up to the target number
+1. Loop over the array
+2. Grab the first index
+3. With the first index, loop through array again and see if any them added will equal to integer
+4. Note, grabbing items index is important, so I dont check that item when loop through 
+
+ */
 
 /*
   Add written explanation of your solution here
